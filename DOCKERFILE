@@ -1,0 +1,8 @@
+FROM node:alpine
+RUN mkdir app
+WORKDIR app
+ADD ./omdblogin/package.json package.json
+RUN npm install
+ADD ./omdblogin/app.js app.js
+
+EXPOSE 3000
